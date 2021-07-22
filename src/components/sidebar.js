@@ -7,7 +7,7 @@ export default function Sidebar({collapseSidebar}) {
 			<div className="sidebar-content js-simplebar">
 				<Link href="/">
 					<a className="sidebar-brand" href="index.html">
-						<span className="align-middle">AdminKit</span>
+						<span className="align-middle"><span className="text-primary">My</span>Admin</span>
 					</a>
 				</Link>
 

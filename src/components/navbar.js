@@ -2,8 +2,10 @@
 import Image from 'next/image'
 import { useState } from 'react'
 import Avatar from '../styles/img/avatars/avatar.jpg'
+import api from '../util/api'
+import { logOut } from '../util/auth'
 
-export default function NavBar({setCollapsedSidebar}) {
+export default function NavBar({setCollapsedSidebar, token, username}) {
 
 	const [dropdownToggle, setdropdownToggle] = useState(false)
 
@@ -39,11 +41,18 @@ export default function NavBar({setCollapsedSidebar}) {
 							</a>
 							<div className={`dropdown-menu dropdown-menu-end ${dropdownToggle ? 'show' : ''}` } data-bs-popper={`${dropdownToggle ? 'none' : ''}` }>
 								<a className="dropdown-item" href="pages-profile.html">
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user align-middle me-1"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-									Profile
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-user align-middle me-1"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+									Hi {username}
 								</a>
 								<div className="dropdown-divider"></div>
-								<a className="dropdown-item" href="#">Log out</a>
+								<a className="dropdown-item" href="#"
+									onClick={
+										(e) => {
+											e.preventDefault(); 
+											api().post('api/logout', {}, { headers: {"Authorization" : `Bearer ${token}`} })
+											.then(logOut());
+										}}
+								>Log out</a>
 							</div>
 						</li>
 					</ul>
