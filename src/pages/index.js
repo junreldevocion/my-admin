@@ -7,11 +7,7 @@ export default function Home({token}) {
 
     return (
         <Layout title="Home" token={token}>
-            <div className="row mb-2 mb-xl-3">
-                <div className="col-auto d-none d-sm-block">
-                    <h3><strong>Analytics</strong> Dashboard</h3>
-                </div>
-            </div>
+            <h1 className="h3 mb-3"><strong>Analytics</strong> Dashboard</h1>
         </Layout>
     )
 }

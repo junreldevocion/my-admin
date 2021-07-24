@@ -62,11 +62,13 @@ $transition-base: all .35s ease-in-out !default;
 
 // Theme colors
 $blue: #2196F3 !default;
-// $blue:    #3B7DDD !default;
+// $blue:    #3B7DDD !default; 1
 $indigo: #0a0a0a !default;
-$purple: #673AB7 !default;
+// $purple: #673AB7 !default; 1
+$purple: #8338ec !default;
 $pink: #e83e8c !default;
 $red: #dc3545 !default;
+$red: #F44336 !default;
 $orange: #fd7e14 !default;
 $yellow: #fcb92c !default;
 $green: #00E676 !default;
@@ -85,7 +87,7 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black: #000 !default;
 
-$primary: $blue !default;
+$primary: $purple !default;
 $secondary: $gray-600 !default;
 $success: $green !default;
 $info: $cyan !default;
@@ -191,11 +193,11 @@ $input-btn-border-width: $border-width !default;
 $input-btn-line-height: $line-height-base !default;
 $input-btn-line-height-sm: $line-height-sm !default;
 $input-btn-line-height-lg: $line-height-lg !default;
-$input-btn-focus-width: .2rem !default;
-$input-btn-padding-y: .3rem !default;
-$input-btn-padding-y-sm: .2rem !default;
-$input-btn-padding-y-lg: .4rem !default;
-$input-btn-padding-x: .85rem !default;
+$input-btn-focus-width: .25rem !default;
+$input-btn-padding-y: .6rem !default;
+$input-btn-padding-y-sm: .25rem !default;
+$input-btn-padding-y-lg: .5rem !default;
+$input-btn-padding-x: .75rem !default;
 $input-border-width: $input-btn-border-width !default;
 $input-height-border: $input-border-width * 2 !default;
 $input-height-inner: ($font-size-base * $input-btn-line-height)+($input-btn-padding-y * 2) !default;
@@ -234,7 +236,7 @@ $sidebar-transition: margin-left .35s ease-in-out,
 left .35s ease-in-out,
 margin-right .35s ease-in-out,
 right .35s ease-in-out !default;
-$sidebar-bg: #222E3C !default;
+$sidebar-bg: #1d3557 !default;
 
 // Sidebar brand
 $sidebar-brand-padding-y: 1.15rem !default;
@@ -251,12 +253,12 @@ $sidebar-header-color: $gray-400 !default;
 // Sidebar link
 $sidebar-link-padding: .625rem 1.625rem !default;
 $sidebar-link-font-weight: 400 !default;
-$sidebar-link-bg: #222E3C !default;
+$sidebar-link-bg: #1d3557 !default;
 $sidebar-link-color: rgba($gray-200, 0.5) !default;
 $sidebar-link-border-left-color: transparent !default;
 
 $sidebar-link-hover-font-weight: $font-weight-normal !default;
-$sidebar-link-hover-bg: #222E3C !default;
+$sidebar-link-hover-bg: #1d3557 !default;
 $sidebar-link-hover-color: #{rgba($gray-200, 0.75)} !default;
 $sidebar-link-hover-border-left-color: transparent !default;
 
